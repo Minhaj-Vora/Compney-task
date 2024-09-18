@@ -1,0 +1,24 @@
+table{
+    margin-top: 2%;
+    color: black;
+    justify-content: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    background-color: bisque;
+    text-align: center;
+    width: 350px;
+    border: 1px solid black;
+}
+td{
+    background-color: white;
+    text-align: center;
+    width: 350px;
+    border: 1px solid black;
+} 
+.table{
+    display: flex;
+    justify-content: center;
+
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen event</title>
+    <style>
+        body {
+            font-family: "popins", sans-serif;
+        }
+
+        h1 {
+            width: 95%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        #btn {
+            margin: 20px;
+            padding: 20px;
+            border: none;
+            background-color: #fe0067;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Full screen Toggle</h1>
+    <button id="btn">Go to Fullscreen.</button>
+    <p id="my-p"></p>
+    <script>
+        
+        let mydocument = document.documentElement;
+        let btn = document.getElementById('btn');
+        let myp = document.getElementById('my-p');
+
+        mydocument.addEventListener("fullscreenchange", function () {
+            myp.innerHTML = "fullscreenchange event fired!";
+        });
+
+        btn.addEventListener('click', () => {
+            if (btn.textContent == "Go to Fullscreen") {
+                if (mydocument.requestFullscreen) {
+                    mydocument.requestFullscreen();
+                }
+                else if (mydocument.msRequestFullscreen) {
+                    mydocument.msRequestFullscreen();
+                }
+                else if (mydocument.mozRequestFullscreen) {
+                    mydocument.mozRequestFullscreen();
+                }
+                else if (mydocument.webkitRequestFullscreen) {
+                    mydocument.webkitRequestFullscreen();
+                }
+
+                btn.textContent = "Exit Full screen";
+
+            }
+            else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msexitFullscreen) {
+                    document.msexitFullscreen();
+                }
+                else if (document.mozexitFullscreen) {
+                    document.mozexitFullscreen();
+                } else if (document.webkitexitFullscreen) {
+                    document.webkitexitFullscreen();
+                }
+
+                btn.textContent = "Go to Fullscreen"
+            }
+
+        })
+    </script>
+</body>
+
+</html>

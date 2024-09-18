@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body{
+            background-image: url('./background.jpeg');
+            height: 100%;
+            width: 100%;
+        }
+        .main{
+            margin: auto;
+            height: 300px;
+            width: 300px;
+            /* background-color: bisque; */
+            /* display: grid; */
+        }
+        .grid-item{
+            background-color: violet;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        .container,.container1,.container2{
+            display: flex;
+        }
+        .grid-item:hover{
+            background-color: aqua;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+        <div class="container1">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+        <div class="container2">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+    </div>
+</body>
+</html>

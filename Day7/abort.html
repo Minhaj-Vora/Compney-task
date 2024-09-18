@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abort</title>
+</head>
+
+<body>
+    <div class="abort">
+        <p>The onabort event occurs when the loading of an audio or video is aborted.
+
+            The onabort event occurs when a download is aborted, not when an error occurs.
+
+        </p>
+        <video width="320" height="240" controls onabort="Myfunction()">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+    </div>
+    <script>
+        function Myfunction() {
+            alert("This is on abort function");
+        }
+    </script>
+</body>
+
+</html>

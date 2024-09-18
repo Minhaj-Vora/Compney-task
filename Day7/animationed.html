@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animationed html</title>
+    <style>
+        #mydiv{
+            background: antiquewhite;
+            width: 15%;
+            height: 100px;
+            position: relative;
+            font-size: 18px;
+            padding: 16px;
+        }
+        @keyframes mymove {
+            from{left:0px;}
+            to{left:200px;}
+
+        }
+    </style>
+</head>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The animationstart, animationiteration and animationend Events</h2>
+
+<div id="mydiv" onclick="myFunction()">click me to start the animation.</div>
+<script>
+    const div1 = document.getElementById("mydiv");	
+
+function myFunction() {
+  div1.style.animation = "mymove 4s 2";
+}
+
+div1.addEventListener("animationstart", myStartFunction);
+div1.addEventListener("animationiteration", myRepeatFunction);
+div1.addEventListener("animationend", myEndFunction);
+
+function myStartFunction() {
+  this.innerHTML = "The animation has started";
+  this.style.backgroundColor = "pink";
+}
+function myRepeatFunction() {
+  this.innerHTML = "The animation was played again";
+  this.style.backgroundColor = "lightblue";
+}
+function myEndFunction() {
+  this.innerHTML = "The animation has completed";
+  this.style.backgroundColor = "lightgray";
+}
+</script>
+</body>
+</html>

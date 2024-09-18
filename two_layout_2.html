@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Different Layouts</title>
+    <style>
+        body {
+            background-color: #8E88CE;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            margin: auto;
+            max-width: 90%;
+            padding: 16px;
+            border: 3px solid black;
+            border-radius: 8px;
+            background-color: rgb(235, 235, 235);
+        }
+
+        .header {
+            padding: 0;
+            background-color: rgb(235, 235, 235);
+        }
+
+        h2 {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main2 {
+            padding: 16px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        input {
+            width: calc(100% - 20px);
+            height: 40px;
+            margin-bottom: 12px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                width: 100%;
+                max-width: 100%;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background-color: hotpink;
+            }
+
+            .main {
+                padding: 8px;
+            }
+
+            input {
+                height: 36px;
+                margin-bottom: 10px;
+                padding: 6px;
+            }
+
+            .btn {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h2>CREATE ACCOUNT</h2>
+        </div>
+        <div class="main2">
+            <div class="Email">
+                <label for="email">Email Address:</label><br><br>
+                <input type="email" id="email"><br><br>
+            </div>
+            <div class="password">
+                <label for="password">Password:</label><br><br>
+                <input type="password" id="password"><br><br>
+                <label for="confirm-password">Confirm Password:</label><br><br>
+                <input type="password" id="confirm-password"><br><br>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

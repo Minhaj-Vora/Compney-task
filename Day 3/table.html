@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        #input{
+            width: 175px;
+        }
+        div:hover{
+            width: 150px;
+            font-weight: 200px;
+            font-size: 25px;
+            color: cornflowerblue;
+            text-shadow: 2px 2px 5px red;
+        }
+    </style>
+</head>
+
+<body>
+        <input type="text" id="input-number" placeholder="enter the number">
+        <input type="text" id="number" placeholder="Enter the number">
+        <input type="submit" id="submit" onclick="tabledata()">
+   <p id="input">
+
+   </p>
+   </div>
+    <script>
+        let a = document.getElementById('input-number');
+        let b = document.getElementById('number');
+        let c = document.getElementById('submit');
+        let table = document.getElementById('input');
+        function tabledata(n,s) {
+            for (let i = 1; i <= s; i++) {
+                let newElement = document.createElement('div');
+               newElement.innerHTML += `${n} * ${i} = ${n * i} <br>`;
+               document.body.appendChild(newElement);
+                console.log(newElement)
+
+            }
+        }
+        function fun1(){
+            tabledata(a.value,b.value);
+        }
+        c.addEventListener('click',fun1);
+    </script>
+</body>
+
+</html>

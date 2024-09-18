@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link href="store-style.css" rel="stylesheet">
+    <link href="add_to_cart.css" rel="stylesheet">
+    <style>
+        /* Optional: Add some styles for the quantity buttons */
+        .quantity-buttons {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .quantity-buttons button {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container" style="margin-top: 2rem;">
+            <nav>
+                <img src="images/logo.png" height="75" width="100" alt="Store Logo">
+            </nav>
+            <nav>
+                <ul>
+                    <li style="margin-right: 4rem;"><a href="home.html">Home</a></li>
+                    <li style="margin-right: 4rem;"><a href="store.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <a href="add_to_cart.html">
+                    <img src="images/Add to cart.jpeg" height="50" width="50" alt="Add to Cart">
+                </a>
+            </nav>
+            <nav>
+                <a href="sign-up.html">
+                    <button id="btn-dark-outline">Sign Up/Log In</button>
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically inserted here by cart.js -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="cart.js"></script>
+</body>
+</html>

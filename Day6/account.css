@@ -1,0 +1,79 @@
+body{
+    background-image: url('./images/login-bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.white-box{
+    /* margin-top: 0px; */
+    background-color: white;
+    max-width: 490px;
+    width: 80%;
+    height: 490px;
+    text-align: center;
+    border-radius: 7px;
+}
+h1{
+    color: black;
+    font-weight: 5000;
+    font-size: 40px;
+}
+.center{
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+input{
+    outline:0px;
+    border: 0px;
+    background: transparent;
+    margin-left: 10px;
+}
+.input-box{
+    display: flex;
+    width: 400px;
+    border-radius: 0.5rem;
+    background-color: rgba(128,128,128,0.25);
+    padding: 0.75rem 1rem;
+    margin: 10px auto;
+    height: 27px;
+    width: 80%;
+
+}
+.input-box > svg {
+    margin-top: 5px;
+}
+#form-box > form > button{
+    background-color: rgb(204,154,123);
+    color: white;
+    border: 3px solid rgb(204,154,123);
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 1rem;
+    width: 90%;
+}
+#form-box > p{
+    margin-top: 1rem;
+}
+#form-box > p >a {
+    text-decoration-line: underline;
+}
+#eye-toggle{
+    display: flex;
+    margin-top: 7px;
+    margin-left: 40px;
+}
+svg#eye-slash-icon{
+    display: flex;
+}
+svg#eye-icon{
+    display: none;
+}

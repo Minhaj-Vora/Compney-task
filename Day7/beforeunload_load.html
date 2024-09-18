@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beforeunload and load.</title>
+</head>
+<body>
+    <img width="500px" src="load.jpg">
+    <script>
+        window.addEventListener('DOMContentLoaded',function(){
+            alert("onbeforeload function is called.");
+        });
+        window.addEventListener('load',function(){
+            alert("onbeforeload function is called.");
+        });
+
+    </script>
+</body>
+</html>

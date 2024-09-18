@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Diffrent layouts</title>
+    <style>
+        body{
+            background-color: #8E88CE;
+        }
+        .main {
+            margin: auto;
+            height: 293px;
+            width: 250px;
+            border: 3px solid black;
+            border-radius: px;
+        }
+
+        .header {
+            padding: 0px;
+            background-color: rgb(235,235,235);
+        }
+
+        h2 {
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+        }
+        .main2{
+            padding-top: 0px;
+            padding-left: 14px;
+            padding-right: 13px;
+            background-color:rgb(255,255,255);
+        }
+        input{
+            width: 223px;
+            height: 21.2px;
+        }
+        .btn{
+            /* margin-bottom: 3px; */
+            background-color: blue;
+            color: white;
+        }
+        @media (max-width:412px){
+            body{
+            background-color: hotpink;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h2>CREATE ACCOUNT</h2>
+        </div>
+        <div class="main2">
+            <div class="Email">
+                <label for="">Email Address:</label><br><br>
+                <input type="email"><br><br>
+            </div>
+            <div class="password">
+                <label>Password:</label><br><br>
+                <input type="password"><br><br>
+                <label for="">Confirm Password:</label><br><br>
+                <input type="password"><br><br>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

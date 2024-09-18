@@ -1,0 +1,54 @@
+body{
+    font-family: 'poppins';
+    color: white;
+}
+.container{
+    display: flex;
+}
+ul{
+    display: flex;
+    margin: 8px;
+
+}
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration-line: none;
+    color: black;
+}
+a:hover{
+    color: rgb(196, 176, 176);
+}
+nav{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+button{
+    font-family: 'poppins';
+}
+#btn-dark-outline{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+}
+#btn-dark-outline:hover{
+    background-color: black;
+    color: white;
+}
+#btn-dark-filled{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 1rem 2rem;
+}
+#btn-dark-filled:hover{
+    background-color: darkgray;
+}

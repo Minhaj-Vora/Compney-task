@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse_move_Mouse_over</title>
+    <style>
+        .container{
+            height: 300px;
+            width: 100%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onmouseover="myfunction()" onmouseout="myfunction2()">
+        this is a div tag
+    </div>
+    <p id="mouse-over">
+
+    </p>
+    <script>
+        function myfunction(){
+            let a = document.getElementById('mouse-over');
+            a.innerHTML += "mouse is over the element.";
+        }
+        function myfunction2(){
+            alert("mouse is out the div tag.");
+        }
+    </script>
+</body>
+</html>

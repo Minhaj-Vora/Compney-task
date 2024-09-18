@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onfocusing</title>
+</head>
+<body>
+    Enter Your Name:<input type="text" onfocusin="myfunction()" onfocusout="myfunction2()">
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        function myfunction(){
+            document.getElementById('demo').innerHTML ="onfocuin event ocuur."
+        }
+        function myfunction2(){
+            document.getElementById('demo2').innerHTML ="onfocuout event ocuur."
+        }
+    </script>
+</body>
+</html>

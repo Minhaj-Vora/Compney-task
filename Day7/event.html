@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body onafterprint="afterprint()" onbeforeprint="print()">
+    <h1 onpaste="myfunction()" oncut="cut()" oncopy="demo()">Events in js it is copy event.</h1>
+
+    <script>
+        function demo(){
+            alert("you copied the text.");
+        }
+        function cut(){
+            alert("cut is performed.");
+        }
+        function myfunction(){
+            alert("paste is performed.");
+        }
+        function print(){
+            alert("onbefore event is called");
+        }
+        function afterprint(){
+            alert("onafter print event is called.");
+        }
+    </script>
+</body>
+</html>

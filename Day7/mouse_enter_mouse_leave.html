@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse enter mouse leave</title>
+</head>
+
+<body>
+    <div id="container" onmouseenter="myfunction()" onmouseleave="myfunction2()">
+        This is mouseenter and mouse leave event.
+    </div>
+    <script>
+        function myfunction(event){
+            document.getElementById('container').style.background ="red";
+        }
+        function myfunction2(){
+            document.getElementById('container').style.background = "pink";
+        }
+    </script>
+</body>
+
+</html>

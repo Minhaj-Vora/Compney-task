@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change</title>
+    <link rel="stylesheet" href="http://youtube.local/assets/decode.css">
+    <link rel="stylesheet" href="http://youtube.local/assets/favicon.icon">
+</head>
+<body>
+  <h2>onhashchange - decode</h2>
+  <p id="hash-update"></p>
+    <Script>
+      let hashupdate = document.getElementById('hash-update');
+
+      window.addEventListener('hashchange',function(){
+        hashupdate.textContent = window.location.hash;
+      })
+
+    </Script>
+</body>
+</html>

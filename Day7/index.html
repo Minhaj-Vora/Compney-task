@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7</title>
+    <style>
+        #myDIV {
+            width: 100%;
+            height: 100px;
+            background: orange;
+            position: relative;
+            font-size: 18px;
+            padding: 16px;
+        }
+
+
+        @keyframes mymove {
+            from {
+                top: 0px;
+            }
+
+            to {
+                top: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body onbeforeprint="Myfunction4()" onafterprint="Myfunction3()">
+    <div class="input-one">
+        <p>This is onclick</p>
+        <input type="text" id="input-1" placeholder="Enter your name">
+        <input id="submit" type="button" value="submit">
+        <p id="output-one"></p>
+    </div>
+
+    <div class="input-2">
+        <p>this is onblur</p>
+        <input type="text" id="input-2" placeholder="Enter the name" onblur="Myfunction()">
+    </div>
+
+    <div class="abort">
+        <p>This is on abort function and oncanplay.</p>
+        <video width="320" height="240" controls onabort="Myfunction3()" oncanplay="Myfunction5()"
+            oncanplaythrough="Myfunction6()">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+    </div>
+
+    <p>animation.</p>
+    <div id="myDIV" onclick="myfunction()">Click me to start the animation.</div>
+
+
+    <p>Onchange event.</p>
+    <p>Select a new car from the list.</p>
+
+    <select id="mySelect" onchange="myFunction6()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Volvo">Volvo</option>
+    </select>
+
+    <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+    <p id="demo3"></p>
+
+    <p>text copy event</p>
+    <input type="text" oncopy="myFunction8()" value="Try to copy me">
+
+    <p id="demo4"></p>
+
+
+    <p>cut event.</p>
+    <input type="text" oncut="myFunction9()" value="Try to cut this text">
+
+    <p id="demo5"></p>
+
+
+    <p>dbclick</p>
+    <p ondblclick="myFunction10()">Double-click this paragraph to trigger a function.</p>
+
+    <p id="demo6"></p>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

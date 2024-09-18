@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onended</title>
+</head>
+<body>
+    <div class="ended">
+        <p>event occur when audio or video has reached to end.</p>
+        <video width="320" height="240" controls onended="Myfunction()">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <p id="demo"></p>
+    </div>
+    <script>
+        function Myfunction(){
+            document.getElementById('demo').innerHTML="the video has been reched to end."
+        }
+    </script>
+</body>
+</html>

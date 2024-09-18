@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loadedmetadata</title>
+</head>
+
+<body>
+    <video height="300px" width="500px" controls onloadedmetadata="myFunction()">
+        <source src="video.mp4" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+    </video>
+    <script>
+        function myFunction() {
+            alert("Meta data for video loaded");
+        }
+    </script>
+</body>
+
+</html>

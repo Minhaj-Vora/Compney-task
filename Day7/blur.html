@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blur</title>
+   
+</head>
+
+<body>
+   Enter your name:<input id="blur" type="text" onblur="myfunction()" placeholder="Enter your name">
+
+    <script>
+      function myfunction(){
+        let mv = document.getElementById("blur");
+        mv.value = "";
+      }
+    </script>
+</body>
+
+</html>

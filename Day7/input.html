@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inout</title>
+</head>
+<body>
+    <input type="text" id="myInputField" placeholder="Enter a username...">
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        let myInputField = document.getElementById('myInputField');
+
+        myInputField.addEventListener("input",()=>{
+            demo.innerHTML += "Characte is:" + myInputField.value;
+            demo1.innerHTML = myInputField.value;
+        
+        })
+    </script>
+</body>
+</html>

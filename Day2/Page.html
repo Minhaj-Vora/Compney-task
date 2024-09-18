@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Page</title>
+    <style>
+        .container {
+            border: 1px solid whitesmoke;
+            height: 490px;
+            width: 450px;
+            border-radius: 5px;
+            margin: auto;
+            background-color: #F3F5F5;
+
+        }
+
+        .field {
+            width: 50px;
+        }
+
+        .candidate {
+            margin-left: 15px;
+        }
+
+        .aditional-info {
+            margin-left: 15px;
+
+        }
+
+        .btn {
+            color: white;
+        }
+
+        span {
+            color: white;
+        }
+        .heading{
+            display: flex;
+        }
+        .first-name ,.email,.select-tag{
+            border:  1px solid #E6EBEB;
+            border-radius: 3px;
+            height: 20px;
+        }
+        .about-yourself,.about-your-school{
+            border:  1px solid #E6EBEB;
+            border-radius: 3px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div class="candidate">
+            <div class="heading" style="display: flex;gap: 1rem;">
+                <div style="padding: 0.5rem; border-radius: 1rem 1rem 1rem 0rem;background-color: blue;color: white;">1</div>
+                <div style="font-size: 1.4rem">Candidate Info</div>
+            </div>
+            <br>
+            <input type="text" placeholder="Your Name*" class="first-name" style="width: 90%; background-color: #E6EBEB;"><br><br>
+            <input type="text" class="email" placeholder="Your Email*" style="width: 90%; background-color: #E6EBEB;"><br><br>
+            <textarea name="" id="" class="about-yourself" style="width: 90%; background-color: #E6EBEB;" placeholder="About yourself"></textarea><br><br>
+            <label for="" style="font-size: 18px;"><b>Interest:</b></label><br>
+            <br>
+            <select name="" id="" class="select-tag" style="width: 90%; background-color: #E6EBEB;">
+                <option value="" class="field">Fishkeoine</option>
+            </select><br><br>
+        </div>
+        <div class="aditional-info">
+            <div class="heading" style="display: flex;gap: 1rem;">
+                <div  style="padding: 0.5rem; border-radius: 1rem 1rem 1rem 0rem;background-color: blue;color: white;">2</div>
+                <div style="font-size:1.4rem;">Additional Info</div>  
+            </div>
+            <br>
+            <textarea name="" id="" class="about-your-school" style="width: 90%; background-color: #E6EBEB;" placeholder="About Your School"></textarea><br><br><br>
+            <input type="button" value="submit" class="btn"
+                style="width: 92%; height: 30px; background-color: blue; text-decoration: white;">
+        </div>
+    </div>
+</body>
+
+</html>

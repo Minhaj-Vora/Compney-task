@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infinity drag and drop</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #drop-zone {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            margin-left: 400px;
+            background-color: #ccc;
+            border-radius: 50%;
+        }
+
+        #card {
+            margin: 10px;
+            width: 180px;
+            height: 180px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+
+        .card {
+            margin: 10px;
+            width: 160px;
+            height: 160px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div draggable="true" id="card" class="card"></div>
+        <div id="drop-zone"></div>
+    </div>
+
+    <script>
+        let card = document.getElementById('card');
+        let dropzone = document.getElementById('drop-zone');
+        let con = document.getElementById('container');
+        // let crd = document.getElementsByClassName('card');
+        let count = 1;
+
+        card.style.background = get_rand_color();
+
+
+        let height = 180;
+        let width = 180;
+        let padding = 10;
+        let dif = 20;
+        let dif2 = 40;
+
+
+        card.addEventListener('drag', function () {
+            console.log("Element is draged");
+        })
+
+        card.addEventListener('dragstart', function (event) {
+            console.log("Drag is started");
+        })
+
+        card.addEventListener('drop', function (event) {
+            console.log("Drag is OVER DONE!!!", count);
+            const elemment = document.getElementById(`element-${count - 1}`);
+            console.log('elemment', elemment)
+            const newHeight = height - (count * dif);
+            const newWidth = width - (count * dif);
+
+            elemment.style.height = `${newHeight}px`;
+            elemment.style.width = `${newWidth}px`;
+            elemment.style.padding = `${padding - count}px`;
+        })
+
+        dropzone.addEventListener('dragenter', function (event) {
+            console.log("drag is enterd in the dragzone.");
+        })
+
+        dropzone.addEventListener('dragover', function (event) {
+            console.log("drag is over")
+            event.preventDefault();
+        })
+
+
+        dropzone.addEventListener('drop', function (event) {
+            console.log("the drag is droped.");
+            dropzone.prepend(card);
+        })
+
+
+        dropzone.addEventListener('dragend', function () {
+            console.log("drag is endded.");
+            element_create_new();
+            count++;
+
+            // const elemment = document.getElementById(`element-${count-1}`);
+            // console.log('elemment', elemment)
+            // const newHeight = height - (count * dif);
+            // const newWidth = width - (count * dif);
+
+            // elemment.style.height = `${newHeight}px`;
+            // elemment.style.width = `${newWidth}px`;
+            // elemment.style.padding = `${padding - count}px`;
+        })
+
+        function element_create_new() {
+            const para = document.createElement('div');
+            // const uniqid = Date.now();
+            const id = `element-${count}`;
+
+            para.setAttribute("id", id);
+            para.setAttribute("class", "card");
+            para.setAttribute("data-count", count);
+
+            con.appendChild(para);
+            let cardID = document.getElementById(id);
+            cardID.style.background = get_rand_color();
+            cardID.style.position = 'absolute';
+
+            // const newHeight = height - (count * dif);
+            // const newWidth = width - (count * dif);
+
+            cardID.style.height = `${height}px`;
+            cardID.style.width = `${width}px`;
+            cardID.style.padding = `${padding}px`;
+
+            drag_drop(card, cardID)
+        }
+
+        function drag_drop(log, log1) {
+            log1.draggable = true;
+            log.draggable = false;
+
+            // console.log(log)
+
+
+
+            log.addEventListener('drag', function () {
+                console.log("Element is draged");
+            })
+
+            log.addEventListener('drop', function (event) {
+                console.log("the drag is droped.", count);
+                log.appendChild(log1);
+            })
+
+            // card = document.getElementById(log1);
+        }
+
+        function get_rand_color() {
+            var color = Math.floor(Math.random() * Math.pow(256, 3)).toString(16);
+            while (color.length < 6) {
+                color = "0" + color;
+            }
+            return "#" + color;
+        }
+    </script>
+</body>
+
+</html>

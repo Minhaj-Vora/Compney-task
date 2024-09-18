@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange event</title>
+</head>
+<body>
+    <h1>This is onchange event.</h1>
+   <select id="change" onchange="other()">
+        <option>Apple</option>
+        <option>Mango</option>
+        <option>Banana</option>
+        <option>Orange</option>
+        <option>Rasbari</option>
+   </select>
+
+   <input id="submit" type="submit" value="submit" onclick="find()">
+
+    <script>
+       function other(){
+        let change = document.getElementById('change').value;
+        alert("you selected "+change);
+       }
+       function find(){
+        alert("It is click event.");
+       }
+    </script>
+</body>
+</html>
