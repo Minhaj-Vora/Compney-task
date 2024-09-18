@@ -47,10 +47,8 @@ function firstRecurringChar(words) {
         }
     }
 
-    // let str1 = str.toString();
     console.log(ind);
-    // console.log(str1);  
     console.log(str);  
     return `${str[0]} [ ${ind[0]} , ${ind[1]} ] <br> ${str[1]} [ ${ind[2]} , ${ind[3]} ] <br> ${str[2]} [ ${ind[4]} , ${ind[5]} ] <br> ${str[3]} [ ${ind[6]} , ${ind[7]} ] <br> ${str[4]} [ ${ind[8]} , ${ind[9]} ]`;
-    
+
 }
